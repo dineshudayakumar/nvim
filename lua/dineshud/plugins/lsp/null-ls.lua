@@ -13,6 +13,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 -- configure null_ls
 null_ls.setup({
+	debug = false,
 	-- setup formatters & linters
 	sources = {
 		--  to disable file types use
@@ -33,6 +34,9 @@ null_ls.setup({
 		-- yaml
 		formatting.yamlfmt,
 		diagnostics.yamllint,
+		-- ruby
+		formatting.rubocop,
+		diagnostics.rubocop,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
@@ -53,4 +57,7 @@ null_ls.setup({
 			})
 		end
 	end,
+
+	-- update root_dir as golangci_lint not working with the defaults
+	root_dir = require("null-ls.utils").root_pattern(".null-ls-root", "go.mod", "Makefile", ".git"),
 })
