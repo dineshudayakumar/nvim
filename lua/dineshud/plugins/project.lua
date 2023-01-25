@@ -10,7 +10,7 @@ end
 
 project.setup({
 	-- silent_chdir = false,
-	ignore_lsp = { "null-ls" },
+	ignore_lsp = { "null-ls", "sumneko_lua" },
 })
 
 telescope.load_extension("projects")

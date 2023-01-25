@@ -86,6 +86,18 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim")
 
 	-- project management
+	-- install without yarn or npm
+
+	-- markdown-preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+
 	use("ahmedkhalf/project.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim

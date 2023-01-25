@@ -28,8 +28,8 @@ null_ls.setup({
 		}),
 
 		-- golang
-		formatting.goimports,
-		formatting.golines,
+		--formatting.goimports,
+		--formatting.gofumpt,
 		diagnostics.golangci_lint,
 		-- yaml
 		formatting.yamlfmt,
@@ -37,6 +37,9 @@ null_ls.setup({
 		-- ruby
 		formatting.rubocop,
 		diagnostics.rubocop,
+		-- markdown
+		formatting.markdownlint,
+		diagnostics.markdownlint,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

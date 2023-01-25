@@ -55,6 +55,14 @@ vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 local Terminal = require("toggleterm.terminal").Terminal
 local htop = Terminal:new({ cmd = "htop", hidden = true, direction = "float" })
 
+local rn_docker_connect = Terminal:new({ cmd = "rn-docker-dc connect term", hidden = true, direction = "vertical" })
+
 function _HTOP_TOGGLE()
 	htop:toggle()
 end
+
+function _RN_DOCKER_CONNECT()
+	rn_docker_connect:toggle()
+end
+
+vim.api.nvim_set_keymap("n", "<C-1>", "<cmd>lua _RN_DOCKER_CONNECT()<CR>", { noremap = true, silent = true })

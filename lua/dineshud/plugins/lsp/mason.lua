@@ -17,6 +17,8 @@ mason_lspconfig.setup({
 		"sumneko_lua",
 		"yamlls",
 		"solargraph",
+		-- "puppet",
+		"marksman",
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
