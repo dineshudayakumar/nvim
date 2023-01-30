@@ -64,6 +64,7 @@ return packer.startup(function(use)
 	use("onsails/lspkind.nvim")
 
 	-- formatting and linting
+  use("joechrisellis/lsp-format-modifications.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
 
