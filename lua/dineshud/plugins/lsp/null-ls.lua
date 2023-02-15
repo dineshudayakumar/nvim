@@ -64,9 +64,9 @@ null_ls.setup({
 	-- 		})
 	-- 	end
 	-- end,
-  on_attach = function(client, bufnr)
-	lsp_format.attach(client, bufnr, { format_on_save = false })
-  end,
+	on_attach = function(client, bufnr)
+		lsp_format.attach(client, bufnr, { format_on_save = false })
+	end,
 
 	-- update root_dir as golangci_lint not working with the defaults
 	root_dir = require("null-ls.utils").root_pattern(".null-ls-root", "go.mod", "Makefile", ".git"),

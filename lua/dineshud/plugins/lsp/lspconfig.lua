@@ -65,6 +65,7 @@ lspconfig["gopls"].setup({
 	settings = {
 		gopls = {
 			gofumpt = true,
+      buildFlags = {"-tags=serial,parallel"},
 		},
 	},
 })

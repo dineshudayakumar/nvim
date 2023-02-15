@@ -61,3 +61,12 @@
 `ge` - jump backwards to end of word \
 `gE` - jump backwards to end of word (words can contain punctuations) \
 `%` - move to matching character (default supported `()`, `{}`, `[]`)
+
+## Folds
+
+`zf` - fold operator, followed with text object eg., `zfa{` will fold around {} \
+`zo` - open fold \
+`zc` - close fold \
+`zR` - open all folds \
+`zM` - close all folds \
+`za` - toggle a fold
