@@ -14,7 +14,7 @@ mason_lspconfig.setup({
 	ensure_installed = {
 		"html",
 		"gopls",
-		"sumneko_lua",
+		"lua_ls",
 		"yamlls",
 		"solargraph",
 		-- "puppet",
