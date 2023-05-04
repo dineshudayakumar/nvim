@@ -53,21 +53,6 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
 
-	-- managing and installing lsp servers
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
-
-	-- configuring lsp servers
-	use("neovim/nvim-lspconfig")
-	use("hrsh7th/cmp-nvim-lsp")
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
-	use("onsails/lspkind.nvim")
-
-	-- formatting and linting
-  use("joechrisellis/lsp-format-modifications.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("jayp0521/mason-null-ls.nvim")
-
 	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -75,6 +60,28 @@ return packer.startup(function(use)
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 	})
+
+	-- managing and installing lsp servers
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
+
+	-- configuring lsp servers
+	use("neovim/nvim-lspconfig")
+	use("hrsh7th/cmp-nvim-lsp")
+	use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    requires = {
+        {"nvim-tree/nvim-web-devicons"},
+        {"nvim-treesitter/nvim-treesitter"}
+    }
+  })
+	use("onsails/lspkind.nvim")
+
+	-- formatting and linting
+  use("joechrisellis/lsp-format-modifications.nvim")
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("jayp0521/mason-null-ls.nvim")
 
 	-- auto closing
 	use("windwp/nvim-autopairs")
