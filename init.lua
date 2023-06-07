@@ -1,4 +1,5 @@
 require("dineshud.plugins-setup")
+require("dineshud.core.filetype")
 require("dineshud.core.options")
 require("dineshud.core.colorscheme")
 require("dineshud.core.keymaps")
